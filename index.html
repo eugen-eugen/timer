@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Der Timer</title>
+        <link rel="stylesheet" href="./timer.css">
+        <script src="./timer.js"></script>
+    </head>
+    <body>
+        <div id="display">
+            <table>
+                <tbody>
+                    <tr>
+                        <td> <button onclick="plusHours()">+ Std.</button></td><td></td><td><button onclick="plusMinutes()">+ Min.</button></td><td></td><td><button onclick="plusSeconds()">+ Sek.</button></td>
+                    </tr>
+                    <tr class="digit">
+                        <td><span id="hours">00</span></td><td>:</td><td><span id="minutes">00</span></td><td>:</td><td><span id="seconds">00</span></td>
+                    </tr>
+                    <tr>
+                        <td> <button onclick="minusHours()">- Std.</button></td><td></td><td><button onclick="minusMinutes()">- Min.</button></td><td></td><td><button onclick="minusSeconds()">- Sek.</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="control">
+            <button onclick="start()">Start!</button>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,11 @@
+.digit {
+    font-size: 40pt;
+    font-family: 'Courier New', Courier, monospace;
+    color: orangered;
+}
+.control button{
+    font-size: 40pt;
+}
+#display {
+    align-content: center;
+}
