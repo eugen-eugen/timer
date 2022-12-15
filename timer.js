@@ -34,6 +34,7 @@ function minusHours(){
 function plusMinutes(){
     minutes++
     if (minutes > 59) {
+        plusHours()
         minutes=0
     }
 
@@ -65,6 +66,7 @@ function minusMinutes(){
 function plusSeconds(){
     seconds++
     if (seconds > 59) {
+        plusMinutes();
         seconds=0
     }
 
