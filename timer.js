@@ -102,6 +102,21 @@ function start(){
 function tick(){
     minusSeconds()
     if (seconds == 0 && minutes == 0 && hours == 0){
-        clearInterval(intervalId);
+        clearInterval(intervalId)
+        beep()
     }
+}
+
+const context = new AudioContext();
+
+function beep(){
+    const osc=context.createOscillator();
+    const gainNode = context.createGain();
+    gainNode.connect(context.destination);
+    gainNode.gain.value=0.5;
+    osc.connect(gainNode);
+    osc.frequency.value=880
+    gainNode.gain.setValueAtTime(0, context.currentTime + 0.5)
+//    gainNode.gain.linearRampToValueAtTime(0, context.currentTime + 1)
+    osc.start()
 }
